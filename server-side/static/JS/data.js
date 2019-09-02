@@ -104,9 +104,9 @@ function showTimes12() {
 function addTime() {
 	// var timerLabel = document.getElementById('timerLabel');
 	// Find the table
-	var tabel = document.getElementById('time_data');
+	var table = document.getElementById('time_data');
 	// Insert a row under the header
-	var row = tabel.insertRow(sessionTimes.length);
+	var row = table.insertRow(sessionTimes.length);
 
 	// Cells
 	var numberCell = row.insertCell(0);
@@ -125,10 +125,3 @@ function addTime() {
 	else {ao12Cell.innerHTML = convert(AO12(sessionTimes))};
 
 };
-
-// --------------------------------------------------------------------------------
-// Plotting the Times in the lower right hand corner
-
-function plotTimes() {
-	console.log('Plotting Times...');
-}

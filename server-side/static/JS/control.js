@@ -15,7 +15,7 @@ onkeyup = function(event) {
                 display(convert(AO5(sessionTimes)), convert(AO12(sessionTimes)));
                 // Push time to storage stack
                 addTime();
-                cubePlot();
+                // cubePlot();
                 view_scramble.innerHTML = scramble_out(generator(moves, opposites));
             } 
             else if (running == false) {
