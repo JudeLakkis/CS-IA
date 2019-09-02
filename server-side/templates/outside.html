@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timer</title>
+
+	<!-- Personal Style Sheets -->
+	<link rel="stylesheet" type="text/css" href="static/CSS/outside.css">
+	<link rel="stylesheet" type="text/css" href="static/CSS/timer.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+	<!-- Plotly.js -->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+	<!-- Top Section -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-2" id="logo">
+				<!-- Use this button to trigger the tools pop up -->
+				<button id="logo"><img src="static/Images/logo.png"></button>
+			</div>
+
+			<div class="col-lg" id="scramble">
+				<h2 id="view_scramble"></h2>
+			</div>
+		</div>
+	</div>
+
+	<!-- ------------------------ Split ------------------------ -->
+
+	<!-- Tools Pop Up -->
+	<div id="tools">
+		<div id="tools_content">
+			<span class="close">&times;</span> <!-- &times; is the entity name for the times symbol -->
+			<div class="container-fluid">
+				<div class="row">
+					<h1>Tools</h1>
+				</div>
+
+				<div class="row">
+					<div class="custom-control custom-checkbox">
+  						<input type="checkbox" class="custom-control-input" onclick="isInspection_on()" id="inspection" unchecked>
+  						<label class="custom-control-label" for="inspection">Use WCA Inspection</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" onclick="isSideBar_on()" id="sidebar" checked>
+						<label class="custom-control-label" for="sidebar">Display Times</label>
+					</div>
+				</div>
+				<div id="padder"></div>
+				<div class="row">
+					<div class="col-2">
+						<button class="btn" id="btnSave" onclick="saveTimes()"><strong>Save Times</strong></button>
+					</div>
+
+					<div class="col-2">
+						<button class="btn" id="btnSave" onclick="loadTimes()"><strong>Load Times</strong></button>
+					</div>
+
+					<div class="col-2">
+						<button class="btn" id="btnSave" onclick="clearTimes()"><strong>Clear All</strong></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ------------------------ Split ------------------------ -->
+
+	<!-- Timer Section -->
+	{% block timer %}{% endblock %}
+
+	<!-- ------------------------ Split ------------------------ -->
+
+	<!-- Footer -->
+	<footer class="footer">
+		<strong>
+			<span>IB ComputerScience HL | Cubing Timer</span>
+		</strong>
+	</footer>
+
+	<!-- My Scrambling Script -->
+	<script type="text/javascript" src="static/JS/scrambleV2.js"></script>
+	<!-- My Timer Script -->
+	<script type="text/javascript" src="static/JS/timer.js"></script>
+	<!-- My Application Control Script -->
+	<script type="text/javascript" src="static/JS/control.js"></script>
+	<!-- My Tools Popup Script -->
+	<script type="text/javascript" src="static/JS/tools.js"></script>
+	<!-- My localStorage Script -->
+	<script type="text/javascript" src="static/JS/storage.js"></script>
+
+	<!-- ------------------------ Split ------------------------ -->
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+<!-- Entity Chart: -->
+<!-- https://www.w3schools.com/charsets/ref_html_entities_4.asp -->
+<!-- Colour Scheme: -->
+<!-- https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d80032 -->
+</html>

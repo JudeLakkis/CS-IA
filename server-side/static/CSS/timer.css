@@ -1,0 +1,71 @@
+#timer {
+	text-align: center;
+	background-color: #2B2D42;
+	padding-top: 200px;
+	padding-bottom: 223px;
+}
+
+#timerLabel {
+	padding-top: 20px;
+	font-size: 90px;
+	color: #EDF2F4;
+}
+
+#padder {
+	padding-bottom: 20px;
+}
+
+.btn {
+	width: 180px;
+	height: 50px;
+	background-color: #EDF2F4;
+	color: #2B2D42;
+}
+
+#storage {
+	background-color: #EDF2F4;
+}
+
+.average {
+	color: #EDF2F4;
+}
+
+#box {
+	border: 1px solid #EDF2F4;
+	width: 20%;
+}
+
+#averageDisplay {
+	align-content: center;
+	height: 40px;
+	width: 200px;
+}
+
+table {
+	background-color: white;
+}
+
+thead {
+	background-color: #2B2D42;
+	color: #EDF2F4;
+}
+
+table thead tr{
+    display:block;
+}
+
+table th,table td{
+    width:208px;
+}
+
+
+table  tbody{
+  display:block;
+  height:500px;
+  overflow:auto;
+}
+
+#btnSave {
+	background-color: #2B2D42;
+	color: #EDF2F4;
+}

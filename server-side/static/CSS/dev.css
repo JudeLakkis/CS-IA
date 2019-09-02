@@ -1,0 +1,12 @@
+#box {
+	border: solid 1px black;
+	padding: 20px;
+}
+
+#btn {
+	color: white;
+}
+
+#padder {
+	padding-bottom: 20px;
+}
